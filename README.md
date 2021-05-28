@@ -5,20 +5,45 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
-* System dependencies
+- System dependencies
 
-* Configuration
+- Configuration
 
-* Database creation
+- Database creation
 
-* Database initialization
+- Database initialization
 
-* How to run the test suite
+- How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+- Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+- Deployment instructions
 
-* ...
+- ...
+
+## users テーブル
+
+| Column   | Type   | Options                  |
+| -------- | ------ | ------------------------ |
+| email    | string | null: false, unque: true |
+| password | string | null: false              |
+| name     | string | null: false, index: true |
+
+### Association
+
+- has_many :posts
+
+## posts テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| body   | text       |                                |
+| image  | string     |                                |
+| group  | references | null: false, foreign_key: true |
+| user   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
