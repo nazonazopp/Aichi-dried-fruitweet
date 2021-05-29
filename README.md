@@ -1,27 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Name
 
-Things you may want to cover:
+Aichi-dried-fruitweet
 
-- Ruby version
+# Overview
 
-- System dependencies
+# Description
 
-- Configuration
+# Requirement
 
-- Database creation
+HTML,CSS,jQuery,Ruby,Rails,MySQL
 
-- Database initialization
+# Usage
 
-- How to run the test suite
+# Install
 
-- Services (job queues, cache servers, search engines, etc.)
+$ git clone
 
-- Deployment instructions
+$ cd helloworld
 
-- ...
+$ bundle install
+
+$ rails db:create
+
+$ rails db:migrate
+
+$ rails s
+
+http://localhost:3000
+
+# DB 設計
 
 ## users テーブル
 
@@ -30,20 +39,40 @@ Things you may want to cover:
 | email    | string | null: false, unque: true |
 | password | string | null: false              |
 | name     | string | null: false, index: true |
+| image    | string |
 
 ### Association
 
+- has_many :comments
 - has_many :posts
 
 ## posts テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| body   | text       |                                |
-| image  | string     |                                |
-| group  | references | null: false, foreign_key: true |
-| user   | references | null: false, foreign_key: true |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user_id | references | null: false, foreign_key: true |
+| text    | text       |                                |
+| image   | string     |                                |
 
 ### Association
 
 - belongs_to :user
+
+## Comments テーブル
+
+| Column  | Type       | Options                       |
+| ------- | ---------- | ----------------------------- |
+| user_id | references | null: false,foreign_key: true |
+| comment | text       |                               |
+
+### Association
+
+- belongs_to :user
+
+## Licence
+
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+
+## Author
+
+[tcnksm](https://github.com/tcnksm)
