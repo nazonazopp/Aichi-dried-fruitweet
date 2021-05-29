@@ -57,17 +57,20 @@ http://localhost:3000
 ### Association
 
 - belongs_to :user
+- has_many :comments
 
 ## Comments テーブル
 
 | Column  | Type       | Options                       |
 | ------- | ---------- | ----------------------------- |
 | user_id | references | null: false,foreign_key: true |
+| post_id | references | null: false,foreign_key: true |
 | comment | text       |                               |
 
 ### Association
 
 - belongs_to :user
+- belongs_to :post
 
 ## Licence
 
