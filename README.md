@@ -51,8 +51,9 @@ http://localhost:3000
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | user_id | references | null: false, foreign_key: true |
+| title   | string     |                                |
 | text    | text       |                                |
-| image   | string     |                                |
+| image   | text       |                                |
 
 ### Association
 
