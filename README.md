@@ -39,7 +39,6 @@ http://localhost:3000
 | email    | string | null: false, unque: true |
 | password | string | null: false              |
 | name     | string | null: false, index: true |
-| image    | string |
 
 ### Association
 
