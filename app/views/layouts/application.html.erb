@@ -5,6 +5,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -19,16 +23,16 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <span><%= current_user.name %>
-              <ul class="user__info">
-                <li>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </li>
-              </ul>
-            </span>
-          </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="user_nav">
+      <span><%= current_user.name %>
+        <ul class="user__info">
+          <li>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </span>
+    </div>
+    <div class="navbar-collapse collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="">マイページ</a>
@@ -36,7 +40,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/posts/new">投稿する</a>
         </li>
-       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/users/#{current_user.id}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             マイページ
@@ -48,44 +51,33 @@
             <li><a class="dropdown-item" href="#">削除</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
       </ul>
-    <% else %>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    </div>
+  <% else %>
+    <div class="navbar-collapse collapse " id="navbarSupportedContent" aria-controls="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/users/sign_in">ログイン</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">新規登録</a>
+          <a class="nav-link active" aria-current="page" href="/users/sign_up">新規登録</a>
         </li>
-      
-          </div>
-        <% end %>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
       </ul>
     </div>
-   
+  <% end %>
   </div>
-  
-</div>
-
 </nav>
-
-    <%= yield %>
-
-    <footer>
-      <p>
-        Copyright Aichi-Dried-Fruitweet 2021.
-      </p>
-    </footer>
+<%= yield %>
+<footer>
+  <p class=" navbar-dark bg-info text-white text-center d-block p-2">
+    Copyright Aichi-Dried-Fruitweet 2021.
+  </p>
+</footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <!-- jQuery,Popper.js,Bootstrap JSの順番で読み込む-->
+    <!-- jQueryの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
