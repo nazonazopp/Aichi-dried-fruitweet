@@ -35,7 +35,7 @@
 <div class="contents row">
   <% @posts.each do |post| %>
     <div class="img-thumbnail text-center">
-      <%= image_tag(post.image.url)%>
+      <%= image_tag(post.image.url) %>
       <%= simple_format(post.title) %>
       <%= simple_format(post.text) %>
     </div>

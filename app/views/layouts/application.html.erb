@@ -23,33 +23,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   <% if user_signed_in? %>
-    <div class="user_nav">
-      <span><%= current_user.name %>
-        <ul class="user__info">
-          <li>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </li>
-        </ul>
-      </span>
-    </div>
     <div class="navbar-collapse collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">マイページ</a>
+          <a class="nav-link active" aria-current="page" href="/users/<%= current_user.id %>">マイページ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts/new">投稿する</a>
+          <a class="nav-link active" href="/posts/new">投稿する</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/users/#{current_user.id}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            マイページ
+        <li class="nav-item">
+          <a class="nav-link active" href="/users/sign_out" data-method="delete">
+            ログアウト
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">編集</a></li>
-            <li><a class="dropdown-item" href="#">詳細</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">削除</a></li>
-          </ul>
         </li>
       </ul>
     </div>
