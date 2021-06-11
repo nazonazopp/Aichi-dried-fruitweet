@@ -1,6 +1,31 @@
 <div class="text-center">
   <p><%= @name %>さんの投稿一覧</p>
-
-
+<div class="contents">
+  <% @posts.each do |post| %>
+  <div class="img-thumbnail text-center  mx-auto" style="width: 50rem;">
+    <div class="card">
+      <img class="card-img-top" >
+        <%= image_tag(post.image.url)%>
+      <div class="card-body">
+        <ul >
+          <li class="p-3 mb-2 bg-primary bg-gradient text-white" role="button">
+            <%= link_to '詳細', "/posts/#{post.id}", method: :get %>
+          </li>
+        <% if user_signed_in? && current_user.id == post.user_id %>
+          <li class="p-3 mb-2 bg-success bg-gradient text-white" role="button">
+            <%= link_to '編集', "/tweets/#{post.id}/edit", method: :get %>
+          </li>
+          <li class="p-3 mb-2 bg-danger bg-gradient text-white" role="button">
+            <%= link_to '削除', "/tweets/#{post.id}", method: :delete %>
+          </li>
+        <% end %>
+      <h5 class="card-title"><%= simple_format(post.title) %></h5>
+      <p class="card-text"><%= simple_format(post.text) %></p>
+      <p class="card-text"><small class="text-muted"><span>投稿者</span><%= post.user.name%></small></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
   <%= paginate(@posts) %>
 </div>
+
