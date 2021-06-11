@@ -1,15 +1,19 @@
 <div class="contents row">
   <div class="container">
     <%= form_with(model: @post, local: true) do |form| %>
-      <h3>
-        投稿する
-      </h3>
- 
-<%= form.file_field :image %>
-<%= form.text_field  :title, placeholder: "タイトル" %>
-<%= form.text_area  :text, placeholder: "気に入ったドライフルーツを投稿しよう" , rows: "10" %>
+      <h3 class="text-center mx-auto">投稿する</h3>
+      <div class="field mb-3 row col-sm-6 col-form-label text-center mx-auto">
+      <%= form.file_field :image %>
+      </div>
+      <div class="field mb-3 row col-sm-6 col-form-label text-center mx-auto">
+      <%= form.text_field  :title, placeholder: "タイトル" %>
+      </div>
+      <div class="field mb-3 row col-sm-6 col-form-label text-center mx-auto">
+      <%= form.text_area  :text, placeholder: "気に入ったドライフルーツを投稿しよう" , rows: "10" %>
+      </div>
+      <div class="field mb-3 row col-sm-6 col-form-label text-center mx-auto">
       <%= form.submit "SEND" %>
+      </div>
     <% end %>
-
   </div>
 </div>
