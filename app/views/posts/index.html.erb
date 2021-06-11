@@ -11,7 +11,7 @@
     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner"  style="height: 700px;">
+  <div class="carousel-inner"  style="height:auto">
     <div class="carousel-item active" data-bs-interval= "6000" >
       <img src="/assets/Aichi-Dried.jpg" class="d-block mw-100 " alt="...">
     </div>
@@ -32,13 +32,21 @@
   </a>
 </div>
 
-<div class="contents row">
+<div class="contents">
   <% @posts.each do |post| %>
-    <div class="img-thumbnail text-center">
-      <%= image_tag(post.image.url) %>
-      <%= simple_format(post.title) %>
-      <%= simple_format(post.text) %>
+  <div class="img-thumbnail  text-center mx-auto" style="width: 50rem;">
+    <div class="card">
+      <img class="card-img-top" >
+        <%= image_tag(post.image.url)%>
+      <div class="card-body">
+        <h5 class="card-title"><%= simple_format(post.title) %></h5>
+        <p class="card-text"><%= simple_format(post.text) %></p>
+        <p class="card-text"><small class="text-muted"><span>投稿者</span><%= current_user.name %></small></p>
+      </div>
     </div>
+  </div>
+      
+   
   <% end %>
   <%= paginate(@posts) %>
 </div>
