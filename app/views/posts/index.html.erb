@@ -45,10 +45,10 @@
           </li>
         <% if user_signed_in? && current_user.id == post.user_id %>
           <li class="p-3 mb-2 bg-success bg-gradient text-white" role="button">
-            <%= link_to '編集', "/tweets/#{post.id}/edit", method: :get %>
+            <%= link_to '編集', "/posts/#{post.id}/edit", method: :get %>
           </li>
           <li class="p-3 mb-2 bg-danger bg-gradient text-white" role="button">
-            <%= link_to '削除', "/tweets/#{post.id}", method: :delete %>
+            <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
           </li>
         <% end %>
       <h5 class="card-title"><%= simple_format(post.title) %></h5>

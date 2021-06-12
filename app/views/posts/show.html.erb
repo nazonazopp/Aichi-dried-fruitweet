@@ -1,0 +1,49 @@
+<div class ="contents row">
+  <div class="content_post">
+    <div class="img-thumbnail text-center  mx-auto" style="width: 50rem;">
+      <div class="card">
+        <img class="card-img-top" >
+          <%= image_tag(@post.image.url)%>
+      </div>
+    
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+      <div class="card-body">
+        <ul >
+          <li class="p-3 mb-2 bg-success bg-gradient text-white" role="button">
+            <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
+          </li>
+          <li class="p-3 mb-2 bg-danger bg-gradient text-white" role="button">
+            <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    
+    <%= simple_format(@post.text) %>
+    <span class="name">
+      <a href="/users/<%= @post.user.id %>">
+        <span>投稿者</span><%= @post.user.name %>
+      </a>
+    </span>
+  </div>
+  <div class="container">
+    <% if current_user %>
+      
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+    
+  </div>
+  </div>

@@ -13,10 +13,19 @@ class PostsController < ApplicationController
   end
   def destroy
     post = Post.find(params[:id])
+    post.remove_image!
+    post.save
     post.destroy
   end
 
   def edit
+    @post = Post.find(params[:id])
+    if (@post.image.blank?) then
+     # 画像がないときは何もしない。
+    else
+     # 画像があるときは、これで大丈夫。
+     @post.image.cache!
+    end
   end
 
   def update
