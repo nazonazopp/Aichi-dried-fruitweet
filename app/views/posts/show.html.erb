@@ -20,30 +20,39 @@
     <% end %>
     
     <%= simple_format(@post.text) %>
-    <span class="name">
+    <span class="name ">
       <a href="/users/<%= @post.user.id %>">
         <span>投稿者</span><%= @post.user.name %>
       </a>
     </span>
   </div>
-  <div class="container">
+  <div class="container img-thumbnail text-center  mx-auto" style="width: 50rem;">
+   
     <% if current_user %>
-      
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+      <div class="field mb-3 row col-sm-3 col-form-label w-100 mx-auto">
+        <%= form.text_area :comment, placeholder: "コメントする", rows: "3" %>
+      </div>
+      <div class="field mb-3 row col-sm-3 col-form-label w-100 mx-auto">
+        <%= form.submit "SEND" %>
+        </div>
+      <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
-
-    <div class="comments">
+ 
+    <div class="comments card card-body">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
             <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
+            <%= comment.comment %>
           </p>
         <% end %>
       <% end %>
     </div>
-    
+  
   </div>
-  </div>
+</div>
+

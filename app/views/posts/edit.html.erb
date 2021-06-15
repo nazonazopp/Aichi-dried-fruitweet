@@ -6,7 +6,7 @@
           <div class="card p-2">
             <img class="card-img-top" >
               <%= image_tag(@post.image.url) if @post.image?%>
-              <h3>画像を変更する場合は挿入してください。</h3>
+              <h3>画像を変更する場合はそのまま画像を挿入してください。</h3>
               <%= form.file_field :image %>
               <%= form.text_area :text, placeholder: "text" , rows: "10" %>
               <%= form.submit "SEND" %>
