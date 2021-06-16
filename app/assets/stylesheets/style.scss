@@ -1,16 +1,25 @@
+body {
+  background-color: antiquewhite;
+  font-family: "ＭＳ ゴシック", "Hannotate TC", "Snell Roundhand", sans-serif;
+}
 .card-body {
   ul {
     li {
+      cursor: pointer;
+
       a {
         color: white;
         text-decoration: none;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
       }
     }
   }
-}
-footer {
-  p {
-    display: block;
-    margin: 0 auto;
+  footer {
+    p {
+      display: block;
+    }
   }
 }

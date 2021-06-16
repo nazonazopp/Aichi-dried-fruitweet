@@ -1,0 +1,17 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <h1 class="text-center mx-auto">編集</h1>
+        <div class="img-thumbnail text-center  mx-auto" style="width: 50rem;">
+          <div class="card p-2">
+            <img class="card-img-top" >
+              <%= image_tag(@post.image.url) if @post.image?%>
+              <h3>画像を変更する場合はそのまま画像を挿入してください。</h3>
+              <%= form.file_field :image %>
+              <%= form.text_area :text, placeholder: "text" , rows: "10" %>
+              <%= form.submit "SEND" %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

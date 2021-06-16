@@ -5,18 +5,30 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order("created_at DESC").page(params[:page]).per(5)
   end
+
   def new
     @post = Post.new
   end
+
   def create
     Post.create(post_params)
   end
+
   def destroy
     post = Post.find(params[:id])
+    post.remove_image!
+    post.save
     post.destroy
   end
 
   def edit
+    @post = Post.find(params[:id])
+    if (@post.image.blank?) then
+     # 画像がないときは何もしない。
+    else
+     # 画像があるときは、これで大丈夫。
+     @post.image.cache!
+    end
   end
 
   def update
@@ -42,4 +54,5 @@ class PostsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
 end
