@@ -11,7 +11,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @postt = Post.create(post_params)
+    if @postt.save
+      redirect_to "/"
+    else
+      redirect_to action: :new
+    end
   end
 
   def destroy
