@@ -16,7 +16,7 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 # Install
 
-$ git clone
+$ git clone https://github.com/nazonazopp/Aichi-dried-fruitweet.git
 
 $ cd helloworld
 
