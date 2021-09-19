@@ -6,13 +6,23 @@ Aichi-dried-fruitweet
 
 # Overview
 
-# Description
+愛知県で気になるドライフルーツを投稿して紹介するアプリケーションです。
 
 # Requirement
 
 HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 # Usage
+
+### First screen
+
+### Screen when the check button is pressed
+
+### Screen when the "Check" button is pressed
+
+### Screen when the "Send" button is pressed
+
+### Screen when the "View record" button is pressed
 
 # Install
 
@@ -27,8 +37,6 @@ $ rails db:create
 $ rails db:migrate
 
 $ rails s
-
-http://localhost:3000
 
 # DB 設計
 
