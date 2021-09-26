@@ -3,6 +3,7 @@
 # Name
 
 Aichi-dried-fruitweet
+![スクリーンショット 2021-08-01 21 26 13](https://user-images.githubusercontent.com/61644930/134809237-522b9abe-acce-47fd-87be-41f0f0f1169e.png)
 
 # Overview
 
@@ -14,11 +15,17 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 # Usage
 
-### First screen
+### 初めの画面
 
-### Screen when the check button is pressed
+![スクリーンショット 2021-08-01 21 24 25](https://user-images.githubusercontent.com/61644930/134809319-a884d4a3-5de2-4d6b-8719-47d618c55315.png)
 
-### Screen when the "Check" button is pressed
+### 新規登録画面
+
+![スクリーンショット 2021-08-01 21 25 03](https://user-images.githubusercontent.com/61644930/134809355-7b3dafbb-133d-45bd-866b-f79998697128.png)
+
+### ログイン画面
+
+![スクリーンショット 2021-08-01 21 25 13](https://user-images.githubusercontent.com/61644930/134809389-c7a7a933-9002-4f27-bdd9-4b42d90c52b0.png)
 
 ### Screen when the "Send" button is pressed
 
