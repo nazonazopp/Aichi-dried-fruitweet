@@ -2,7 +2,7 @@
 
 # Name
 
-## Aichi-dried-fruitweet
+Aichi-dried-fruitweet
 
 ![スクリーンショット 2021-08-01 21 26 13](https://user-images.githubusercontent.com/61644930/134809237-522b9abe-acce-47fd-87be-41f0f0f1169e.png)
 
@@ -16,7 +16,7 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 # Usage
 
-### 初めの画面
+### タイトル画面
 
 ![スクリーンショット 2021-08-01 21 24 25](https://user-images.githubusercontent.com/61644930/134809319-a884d4a3-5de2-4d6b-8719-47d618c55315.png)
 
@@ -28,9 +28,23 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 ![スクリーンショット 2021-08-01 21 25 13](https://user-images.githubusercontent.com/61644930/134809389-c7a7a933-9002-4f27-bdd9-4b42d90c52b0.png)
 
-### Screen when the "Send" button is pressed
+### 投稿画面
 
-### Screen when the "View record" button is pressed
+![スクリーンショット 2021-08-01 21 27 02](https://user-images.githubusercontent.com/61644930/134809613-66c7a2af-8052-46e8-885f-c3da75f1cfec.png)
+
+### 編集画面
+
+![スクリーンショット 2021-08-01 21 32 32](https://user-images.githubusercontent.com/61644930/134809772-a4788eaf-2d5b-4e1a-b36b-55d718c41ade.png)
+
+### 投稿削除画面
+
+![スクリーンショット 2021-08-01 21 32 58](https://user-images.githubusercontent.com/61644930/134809723-15a11684-0000-4c02-aa7e-c306db572e71.png)
+
+### コメント画面
+
+![スクリーンショット 2021-08-01 21 32 03](https://user-images.githubusercontent.com/61644930/134809842-98388af6-e74a-4101-8074-12ef488ed950.png)
+
+### 画面
 
 # Install
 
