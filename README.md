@@ -38,7 +38,7 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 ### 編集画面
 
-![スクリーンショット 2021-08-01 21 32 32](https://user-images.githubusercontent.com/61644930/134809772-a4788eaf-2d5b-4e1a-b36b-55d718c41ade.png)
+![スクリーンショット 2021-09-27 23 40 49](https://user-images.githubusercontent.com/61644930/135095104-8b86583d-21fe-4160-ae01-79185dbd266f.png)
 
 ### 投稿削除画面
 
