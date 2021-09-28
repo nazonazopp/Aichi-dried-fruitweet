@@ -32,6 +32,10 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 ![スクリーンショット 2021-08-01 21 27 02](https://user-images.githubusercontent.com/61644930/134809613-66c7a2af-8052-46e8-885f-c3da75f1cfec.png)
 
+### コメント画面
+
+![スクリーンショット 2021-09-27 23 40 18](https://user-images.githubusercontent.com/61644930/134931886-3278903d-c87e-4d6d-8ff6-375124ad7fd8.png)
+
 ### 編集画面
 
 ![スクリーンショット 2021-08-01 21 32 32](https://user-images.githubusercontent.com/61644930/134809772-a4788eaf-2d5b-4e1a-b36b-55d718c41ade.png)
@@ -40,11 +44,13 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 
 ![スクリーンショット 2021-08-01 21 32 58](https://user-images.githubusercontent.com/61644930/134809723-15a11684-0000-4c02-aa7e-c306db572e71.png)
 
-### コメント画面
+### 投稿した人がログインした画面
 
-![スクリーンショット 2021-08-01 21 32 03](https://user-images.githubusercontent.com/61644930/134809842-98388af6-e74a-4101-8074-12ef488ed950.png)
+![スクリーンショット 2021-09-27 23 43 23](https://user-images.githubusercontent.com/61644930/134933483-408b7762-8d91-4840-9553-b94a501d9e7d.png)
 
-### 画面
+### 投稿していない人がログインした画面
+
+![スクリーンショット 2021-09-27 23 38 47](https://user-images.githubusercontent.com/61644930/134933569-997714f9-c3cc-44da-a80d-651716eca898.png)
 
 # Install
 
